@@ -1,0 +1,122 @@
+body {
+  background: linear-gradient(135deg, #e7ecef 0%, #d4e1ee 100%);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', 'sans-serif';
+  margin: 0;
+  min-height: 100vh;
+}
+
+.todo-container {
+  max-width: 900px;
+  background: #fff;
+  margin: 48px auto;
+  padding: 32px 40px 28px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(50,60,100,0.18);
+}
+
+h1 {
+  text-align: center;
+  color: #1a428a;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+#taskInput, #startTimeInput, #endTimeInput {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #c1cbe2;
+  outline: none;
+  flex: 1 1 180px;
+  background: #f7f9fa;
+  transition: border .2s;
+}
+#taskInput:focus, #startTimeInput:focus, #endTimeInput:focus {
+  border: 1.5px solid #328af1;
+}
+#addTaskBtn {
+  background: #2266cc;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s;
+}
+#addTaskBtn:hover, #addTaskBtn:focus {
+  background: #174fa3;
+}
+
+#todoTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f5f9fc;
+  border-radius: 7px;
+  box-shadow: 0 2px 9px #e7ecef10;
+  overflow: hidden;
+}
+#todoTable th, #todoTable td {
+  text-align: center;
+  padding: 13px 8px;
+  border-bottom: 1px solid #ebeff2;
+  font-size: 15px;
+}
+#todoTable th {
+  background: #e9eff7;
+  color: #295788;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+#todoTable tr:last-child td {
+  border-bottom: none;
+}
+.status-select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #b9c7db;
+  font-size: 15px;
+  background: #fff;
+  color: #254268;
+  cursor: pointer;
+}
+.status-completed {
+  background: #21c89622;
+  color: #23935d;
+  font-weight: 600;
+}
+.status-inprogress {
+  background: #ffe47733;
+  color: #b3880b;
+  font-weight: 600;
+}
+.status-ignored {
+  background: #edd2d2;
+  color: #be4646;
+  font-weight: 600;
+}
+.delete-btn {
+  background: none;
+  color: #e55353;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: background .2s;
+}
+.delete-btn:hover {
+  background: #ffe8e8;
+}
+@media (max-width: 700px) {
+  .todo-container { padding: 16px 3vw; }
+  .todo-input { flex-direction: column; gap: 14px; }
+  #todoTable th, #todoTable td { font-size: 13px; padding: 8px 2px; }
+}

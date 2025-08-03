@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional To-Do List App</title>
+  <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <form id="todoForm" class="todo-input">
+      <input type="text" id="taskInput" placeholder="Task description..." required>
+      <input type="datetime-local" id="startTimeInput" required>
+      <input type="datetime-local" id="endTimeInput" required>
+      <button type="submit" id="addTaskBtn">Add</button>
+    </form>
+
+    <table id="todoTable">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Start Date &amp; Time</th>
+          <th>End Date &amp; Time</th>
+          <th>Entered At</th>
+          <th>Status</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="todoTableBody"></tbody>
+    </table>
+  </div>
+  <script src="todo.js"></script>
+</body>
+</html>
